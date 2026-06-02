@@ -1,0 +1,27 @@
+<form [formGroup]="filterForm">
+
+ <input
+   placeholder="Callsign"
+   formControlName="callsign">
+
+ <select formControlName="status">
+
+   <option value="">
+      All
+   </option>
+
+   <option value="Active">
+      Active
+   </option>
+
+   <option value="Delayed">
+      Delayed
+   </option>
+
+   <option value="Arrived">
+      Arrived
+   </option>
+
+ </select>
+
+</form>

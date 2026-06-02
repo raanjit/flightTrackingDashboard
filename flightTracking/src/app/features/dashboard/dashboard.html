@@ -1,0 +1,34 @@
+<div class="dashboard">
+
+  <aside>
+    <app-filters (filterChange)="updateFilters($event)"></app-filters>
+    <app-flight-details [flight]="selectedFlight()"></app-flight-details>
+  </aside>
+
+  <main>
+    <section class="kpi-grid">
+        <app-kpi-card
+            title="Total Flights"
+            [value]="totalFlights()">        
+        </app-kpi-card>
+
+        <app-kpi-card
+            title="Active"
+            [value]="activeFlights()">       
+        </app-kpi-card>
+
+        <app-kpi-card
+            title="Delayed"
+            [value]="delayedFlights()">      
+        </app-kpi-card>
+
+        <app-kpi-card
+            title="Arrived"
+            [value]="arrivedFlights()">      
+        </app-kpi-card>
+    </section>
+
+    <app-flight-map [flights]="filteredFlights()" (flightSelected)="selectFlight($event)"></app-flight-map>
+  </main>
+
+</div>

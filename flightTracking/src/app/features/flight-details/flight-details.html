@@ -1,0 +1,15 @@
+@if (flight) {
+  <div>
+    <h2>{{ flight.flightNumber }}</h2>
+
+    <p>Callsign: {{ flight.callsign }}</p>
+    <p>Aircraft: {{ flight.aircraftType }}</p>
+    <p>Status: {{ flight.status }}</p>
+    <p>Origin: {{ flight.origin }}</p>
+    <p>Destination: {{ flight.destination }}</p>
+    <p>ETD: {{ flight.etd }}</p>
+    <p>ETA: {{ flight.eta }}</p>
+  </div>
+}@else {
+  <p>No flight selected.</p>
+}

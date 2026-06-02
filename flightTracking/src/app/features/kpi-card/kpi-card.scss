@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.kpi-card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h3 {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e40af;
+  }
+}
