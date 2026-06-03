@@ -93,7 +93,6 @@ export class FlightMapComponent implements AfterViewInit {
   }
 
   private renderFlights(flights: any[]) {
-    console.log(flights)
     flights.forEach(flight => {
       if (!flight.currentLat || !flight.currentLng) return;
 
@@ -102,10 +101,6 @@ export class FlightMapComponent implements AfterViewInit {
         { icon: getFlightIcon(flight.status) }  
       );
 
-      // const marker = L.marker([
-      //   flight.currentLat,
-      //   flight.currentLng
-      // ]);
 
       marker.addTo(this.map);
 

@@ -40,7 +40,6 @@ export class DashboardComponent implements OnInit {
     const allFlights = this.flights();
 
     return allFlights.filter((flight: any) => {
-      console.log(flight)
       const callSignMatch =
         !filters.callsign ||
         flight.callsign
@@ -53,29 +52,21 @@ export class DashboardComponent implements OnInit {
     });
   });
 
-  constructor() {
-    effect(() => {
-      console.log('Filtered Flights Changed:', this.filteredFlights());
-    });
-  }
 
   totalFlights = computed(() =>
     this.filteredFlights().length
   );
 
   activeFlights = computed(() =>
-    this.filteredFlights()
-      .filter((f: any) => f.status === 'Active').length
+    this.filteredFlights().filter((f: any) => f.status === 'Active').length
   );
 
   delayedFlights = computed(() =>
-    this.filteredFlights()
-      .filter((f: any) => f.status === 'Delayed').length
+    this.filteredFlights().filter((f: any) => f.status === 'Delayed').length
   );
 
   arrivedFlights = computed(() =>
-    this.filteredFlights()
-      .filter((f: any) => f.status === 'Arrived').length
+    this.filteredFlights().filter((f: any) => f.status === 'Arrived').length
   );
 
   ngOnInit() {
@@ -83,12 +74,10 @@ export class DashboardComponent implements OnInit {
   }
 
   updateFilters(filters: any) {
-    console.log('filters updated:', filters);
     this.filterValues.set(filters);
   }
 
   selectFlight(flight: any) {
-    console.log('flight selected:', flight);
     this.selectedFlight.set(flight);
   }
 }

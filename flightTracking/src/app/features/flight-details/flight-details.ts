@@ -12,8 +12,4 @@ import {
 export class FlightDetails {
   @Input() flight:any
 
-  constructor(){
-    console.log(this.flight)
-
-  }
 }

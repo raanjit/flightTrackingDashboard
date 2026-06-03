@@ -33,7 +33,6 @@ body {
  width:100%;
 }
 
-/* Fix leaflet layers appearing behind other elements */
 .leaflet-pane {
   z-index: 0 !important;
 }
@@ -43,7 +42,6 @@ body {
   z-index: 1 !important;
 }
 
-/* Fix popup styling */
 .leaflet-popup-content-wrapper {
   border-radius: 10px !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;

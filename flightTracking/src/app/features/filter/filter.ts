@@ -20,7 +20,6 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit() {
     this.filterForm.valueChanges.subscribe((value: any) => {
-      console.log(value)
       this.filterChange.emit(value);
     });
   }
